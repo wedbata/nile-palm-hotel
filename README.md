@@ -13,7 +13,7 @@ Optimized for ultra-fast loading over 2G/3G mobile networks and older devices, b
 - **Operational Assurance Hub:** Real-time power status indicator (100% generator backup with dual Caterpillar units), Starlink satellite broadband, 24/7 armed perimeter security, and 10-minute JUB airport shuttle logistics.
 - **Rooms & Rates Specification:** Transparent pricing ($110 Standard Queen, $160 Deluxe King, $240 Executive Nile Suite) with room dimensions, amenity checklists, and instant reservation triggers.
 - **Direct Reservation Calculator:** Real-time client-side stay duration and USD price estimation with automated check-in/check-out date synchronization.
-- **WhatsApp Concierge Dispatch:** Direct deep-link generator transmitting structured, URL-encoded reservation requests to the hotel reception (+211 920 000 123).
+- **WhatsApp Concierge Dispatch:** Direct deep-link generator transmitting structured, URL-encoded reservation requests to the hotel reception ((+211 ___ ___ ___) — WhatsApp reservations).
 - **Embedded SVG Transit Map:** Zero-network vector schematic illustrating Hai Amarat road corridors, Juba International Airport (JUB), UNMISS compound, and the White Nile without third-party map script overhead.
 - **UN/NGO Pro-Forma Invoice Print Engine:** Dedicated `@media print` styling generating a structured pro-forma expense folio with UN DSA compliance terms and signature/stamp blocks.
 - **Bilingual English/Arabic Preparation Notice:** Modal dialog addressing local market linguistic needs (`النسخة العربية قيد الإعداد قريباً`).

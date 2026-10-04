@@ -7,7 +7,27 @@ document.addEventListener('DOMContentLoaded', () => {
   'use strict';
 
   // --- 1. CONSTANTS & CONFIGURATION ---
-  const HOTEL_WHATSAPP_NUMBER = '211920000123';
+  /**
+   * Client WhatsApp contact number (international format without '+' or leading zeros: country code + subscriber number).
+   * Default placeholder: '211000000000'
+   *
+   * TO DEPLOY FOR A REAL HOTEL CLIENT:
+   * Replace '211000000000' with the client's live WhatsApp business number (e.g., '211920000000').
+   */
+  const WHATSAPP_NUMBER = '211000000000'; // replace with client's real number
+  const currencyFormatter = new Intl.NumberFormat('en-US', {
+    style: 'currency',
+    currency: 'USD',
+    minimumFractionDigits: 0,
+    maximumFractionDigits: 0
+  });
+  const folioCurrencyFormatter = new Intl.NumberFormat('en-US', {
+    style: 'currency',
+    currency: 'USD',
+    minimumFractionDigits: 2,
+    maximumFractionDigits: 2
+  });
+
   const ROOM_DATA = {
     standard: {
       name: 'Standard Queen Room',
@@ -204,13 +224,13 @@ document.addEventListener('DOMContentLoaded', () => {
     const totalUSD = nights * roomInfo.price;
 
     if (estRoomName) {
-      estRoomName.textContent = `${roomInfo.name} ($${roomInfo.price}/night)`;
+      estRoomName.textContent = `${roomInfo.name} (${currencyFormatter.format(roomInfo.price)}/night)`;
     }
     if (estNights) {
       estNights.textContent = `${nights} ${nights === 1 ? 'Night' : 'Nights'}`;
     }
     if (estTotalPrice) {
-      estTotalPrice.textContent = `$${totalUSD} USD`;
+      estTotalPrice.textContent = `${currencyFormatter.format(totalUSD)} USD`;
     }
   }
 
@@ -374,9 +394,9 @@ document.addEventListener('DOMContentLoaded', () => {
       // Fill summary modal
       if (summaryRef) summaryRef.textContent = bookingRef;
       if (summaryName) summaryName.textContent = guestName.value.trim();
-      if (summaryRoom) summaryRoom.textContent = `${roomInfo.name} ($${roomInfo.price}/night)`;
+      if (summaryRoom) summaryRoom.textContent = `${roomInfo.name} (${currencyFormatter.format(roomInfo.price)}/night)`;
       if (summaryDates) summaryDates.textContent = `${checkinDate.value} to ${checkoutDate.value} (${diffDays} ${diffDays === 1 ? 'night' : 'nights'})`;
-      if (summaryTotal) summaryTotal.textContent = `$${totalAmount} USD`;
+      if (summaryTotal) summaryTotal.textContent = `${currencyFormatter.format(totalAmount)} USD`;
       if (summaryShuttle) {
         summaryShuttle.textContent = airportShuttle.checked ? 'Complimentary JUB Airport Pickup Included' : 'Not Requested';
       }
@@ -395,9 +415,9 @@ document.addEventListener('DOMContentLoaded', () => {
 
       if (printTableRoom) printTableRoom.textContent = `${roomInfo.name} Accommodation`;
       if (printTableNights) printTableNights.textContent = `${diffDays} ${diffDays === 1 ? 'Night' : 'Nights'}`;
-      if (printTableRate) printTableRate.textContent = `$${roomInfo.price.toFixed(2)}`;
-      if (printTableSubtotal) printTableSubtotal.textContent = `$${totalAmount.toFixed(2)} USD`;
-      if (printTableTotal) printTableTotal.textContent = `$${totalAmount.toFixed(2)} USD`;
+      if (printTableRate) printTableRate.textContent = folioCurrencyFormatter.format(roomInfo.price);
+      if (printTableSubtotal) printTableSubtotal.textContent = `${folioCurrencyFormatter.format(totalAmount)} USD`;
+      if (printTableTotal) printTableTotal.textContent = `${folioCurrencyFormatter.format(totalAmount)} USD`;
 
       if (printTableShuttleTitle) {
         printTableShuttleTitle.textContent = airportShuttle.checked
@@ -427,7 +447,7 @@ document.addEventListener('DOMContentLoaded', () => {
       });
 
       if (modalWhatsappSend) {
-        modalWhatsappSend.href = `https://wa.me/${HOTEL_WHATSAPP_NUMBER}?text=${encodeURIComponent(whatsappMsg)}`;
+        modalWhatsappSend.href = `https://wa.me/${WHATSAPP_NUMBER}?text=${encodeURIComponent(whatsappMsg)}`;
       }
 
       // Show modal
@@ -484,7 +504,7 @@ document.addEventListener('DOMContentLoaded', () => {
         notes: specialRequests.value.trim()
       });
 
-      const url = `https://wa.me/${HOTEL_WHATSAPP_NUMBER}?text=${encodeURIComponent(msg)}`;
+      const url = `https://wa.me/${WHATSAPP_NUMBER}?text=${encodeURIComponent(msg)}`;
       window.open(url, '_blank');
     });
   }
@@ -583,7 +603,7 @@ document.addEventListener('DOMContentLoaded', () => {
     setTimeout(() => {
       toast.style.opacity = '0';
       toast.style.transform = 'translateX(100%)';
-      toast.style.transition = 'all 0.3s ease';
+      toast.style.transition = 'opacity 0.3s ease, transform 0.3s ease';
       setTimeout(() => toast.remove(), 300);
     }, 4000);
   }

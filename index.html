@@ -26,6 +26,7 @@
   <link rel="stylesheet" href="style.css">
 </head>
 <body>
+  <a href="#main-content" class="skip-link">Skip to main content</a>
 
   <!-- TOP DISPATCH & OPERATIONAL STATUS -->
   <aside class="top-bar" aria-label="Hotel status and direct dispatch">
@@ -47,11 +48,11 @@
           <span class="lang-sep">|</span>
           <span class="lang-ar" lang="ar" dir="rtl">العربية قريباً</span>
         </button>
-        <a href="tel:+211920000123" class="top-bar__phone" aria-label="Call Front Desk 24/7">
+        <a href="tel:+211000000000" class="top-bar__phone" aria-label="Call Front Desk 24/7">
           <svg class="icon icon-xs" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true">
             <path d="M6.62 10.79a15.05 15.05 0 006.59 6.59l2.2-2.2a1 1 0 011.02-.24c1.12.37 2.33.57 3.57.57a1 1 0 011 1V20a1 1 0 01-1 1A17 17 0 013 4a1 1 0 011-1h3.5a1 1 0 011 1c0 1.25.2 2.45.57 3.57a1 1 0 01-.25 1.02l-2.2 2.2z"/>
           </svg>
-          <span class="hide-mobile">+211 (0) 920 000 123</span>
+          <span class="hide-mobile">(+211 ___ ___ ___)</span>
           <span class="show-mobile">Call Desk</span>
         </a>
       </div>
@@ -126,11 +127,11 @@
 
         <div class="mobile-nav__bottom">
           <a href="#booking-section" class="btn btn--primary btn--block">Reserve Your Stay</a>
-          <a href="https://wa.me/211920000123?text=Hello%20Nile%20Palm%20Hotel%2C%20I%20would%20like%20to%20inquire%20about%20a%20booking" target="_blank" rel="noopener noreferrer" class="btn btn--whatsapp btn--block">
+          <a href="https://wa.me/211000000000?text=Hello%20Nile%20Palm%20Hotel%2C%20I%20would%20like%20to%20inquire%20about%20a%20booking" target="_blank" rel="noopener noreferrer" class="btn btn--whatsapp btn--block">
             <span>Direct WhatsApp Concierge</span>
           </a>
           <div class="mobile-nav__meta">
-            <p><strong>Front Desk:</strong> +211 920 000 123</p>
+            <p><strong>Front Desk:</strong> (+211 ___ ___ ___)</p>
             <p><strong>Email:</strong> reservations@nilepalmhotel.com</p>
           </div>
         </div>
@@ -146,7 +147,7 @@
       <div class="hero__backdrop">
         <picture>
           <source srcset="images/nimule hotel.jpg" type="image/jpeg">
-          <img src="images/nimule hotel.jpg" alt="Nile Palm Hotel compound grounds and swimming pool in Hai Amarat, Juba" class="hero__image" fetchpriority="high">
+          <img src="images/nimule hotel.jpg" alt="Nile Palm Hotel compound grounds and swimming pool in Hai Amarat, Juba" class="hero__image" width="1600" height="900" fetchpriority="high">
         </picture>
         <div class="hero__shade"></div>
       </div>
@@ -221,17 +222,17 @@
             <div class="ledger-form__row">
               <div class="field">
                 <label for="hero-checkin" class="field__label">Check-in</label>
-                <input type="date" id="hero-checkin" class="field__input" required>
+                <input type="date" id="hero-checkin" name="hero_checkin" class="field__input" required>
               </div>
               <div class="field">
                 <label for="hero-checkout" class="field__label">Check-out</label>
-                <input type="date" id="hero-checkout" class="field__input" required>
+                <input type="date" id="hero-checkout" name="hero_checkout" class="field__input" required>
               </div>
             </div>
 
             <div class="field">
               <label for="hero-room-type" class="field__label">Room Tier</label>
-              <select id="hero-room-type" class="field__select" required>
+              <select id="hero-room-type" name="hero_room_type" class="field__select" required>
                 <option value="standard">Standard Queen ($110 / night)</option>
                 <option value="deluxe" selected>Deluxe King ($160 / night)</option>
                 <option value="executive">Executive Nile Suite ($240 / night)</option>
@@ -240,7 +241,7 @@
 
             <div class="field">
               <label for="hero-guests" class="field__label">Occupancy</label>
-              <select id="hero-guests" class="field__select">
+              <select id="hero-guests" name="hero_guests" class="field__select">
                 <option value="1">1 Guest</option>
                 <option value="2" selected>2 Guests</option>
                 <option value="3">3 Guests</option>
@@ -373,7 +374,7 @@
             <div class="room-sheet__media">
               <picture>
                 <source srcset="images/room3.avif" type="image/avif">
-                <img src="images/OIP-3.jpg" alt="Standard Queen Room interior with dedicated work desk" class="room-sheet__img" loading="lazy">
+                <img src="images/OIP-3.jpg" alt="Standard Queen Room interior with dedicated work desk" class="room-sheet__img" width="600" height="400" loading="lazy">
               </picture>
               <div class="room-sheet__price-tag">
                 <span class="room-sheet__val">$110</span>
@@ -418,7 +419,7 @@
             <div class="room-sheet__media">
               <picture>
                 <source srcset="images/room.avif" type="image/avif">
-                <img src="images/OIP.jpg" alt="Deluxe King Room with private terrace and garden views" class="room-sheet__img" loading="lazy">
+                <img src="images/OIP.jpg" alt="Deluxe King Room with private terrace and garden views" class="room-sheet__img" width="600" height="400" loading="lazy">
               </picture>
               <div class="room-sheet__badge">Most Requested by Mission Leads</div>
               <div class="room-sheet__price-tag">
@@ -464,7 +465,7 @@
             <div class="room-sheet__media">
               <picture>
                 <source srcset="images/room2.avif" type="image/avif">
-                <img src="images/glory hotel.jpg" alt="Executive Nile Suite featuring separate lounge and meeting area" class="room-sheet__img" loading="lazy">
+                <img src="images/glory hotel.jpg" alt="Executive Nile Suite featuring separate lounge and meeting area" class="room-sheet__img" width="600" height="400" loading="lazy">
               </picture>
               <div class="room-sheet__price-tag">
                 <span class="room-sheet__val">$240</span>
@@ -604,7 +605,7 @@
           <div class="dining-tableau__visual">
             <picture>
               <source srcset="images/imperial.jpg" type="image/jpeg">
-              <img src="images/imperial.jpg" alt="The Palm Terrace Restaurant in Juba" class="dining-tableau__img" loading="lazy">
+              <img src="images/imperial.jpg" alt="The Palm Terrace Restaurant in Juba" class="dining-tableau__img" width="800" height="600" loading="lazy">
             </picture>
             <div class="dining-tableau__seal">
               <strong>6:30 AM</strong>
@@ -666,7 +667,7 @@
           <div class="review-entry">
             <div class="review-entry__stars" aria-label="5 out of 5 stars">★★★★★</div>
             <blockquote class="review-entry__quote">
-              "In Juba, dependable power and low-latency Wi-Fi are critical for remote operations. Nile Palm provided 100% stable Starlink internet for our regional UN coordination briefings, quiet air-conditioned rooms, and zero generator hiccups during my 3-week assignment."
+              “In Juba, dependable power and low-latency Wi-Fi are critical for remote operations. Nile Palm provided 100% stable Starlink internet for our regional UN coordination briefings, quiet air-conditioned rooms, and zero generator hiccups during my 3-week assignment.”
             </blockquote>
             <div class="review-entry__author">
               <div class="review-entry__initials">MK</div>
@@ -681,7 +682,7 @@
           <div class="review-entry">
             <div class="review-entry__stars" aria-label="5 out of 5 stars">★★★★★</div>
             <blockquote class="review-entry__quote">
-              "The 10-minute airport pickup was flawless as I stepped out of JUB arrivals. Compound security gave our technical team complete peace of mind, and the conference hall hosted our 40-person infrastructure workshop without a single hitch."
+              “The 10-minute airport pickup was flawless as I stepped out of JUB arrivals. Compound security gave our technical team complete peace of mind, and the conference hall hosted our 40-person infrastructure workshop without a single hitch.”
             </blockquote>
             <div class="review-entry__author">
               <div class="review-entry__initials">EN</div>
@@ -696,7 +697,7 @@
           <div class="review-entry">
             <div class="review-entry__stars" aria-label="5 out of 5 stars">★★★★★</div>
             <blockquote class="review-entry__quote">
-              "Returning home to Juba with my family from the UK, we booked the Executive Suite. Immaculate cleanliness, green gardens, delicious fresh fish, and seamless payment via m-GURUSH and UK Visa card. This is our permanent Juba home."
+              “Returning home to Juba with my family from the UK, we booked the Executive Suite. Immaculate cleanliness, green gardens, delicious fresh fish, and seamless payment via m-GURUSH and UK Visa card. This is our permanent Juba home.”
             </blockquote>
             <div class="review-entry__author">
               <div class="review-entry__initials">AG</div>
@@ -758,7 +759,7 @@
             </button>
             <div class="faq-drawer">
               <p>
-                Include your flight number and estimated arrival time in the booking form or message our WhatsApp reception at (+211 920 000 123) at least 12 hours prior to touchdown. Our driver will be stationed at the arrivals exit holding a Nile Palm Hotel placard.
+                Include your flight number and estimated arrival time in the booking form or message our WhatsApp reception at (+211 ___ ___ ___) &mdash; WhatsApp reservations at least 12 hours prior to touchdown. Our driver will be stationed at the arrivals exit holding a Nile Palm Hotel placard.
               </p>
             </div>
           </div>
@@ -919,12 +920,12 @@
               <div class="res-form__row">
                 <div class="field col-50">
                   <label for="guest-name" class="field__label">Full Name <span class="req">*</span></label>
-                  <input type="text" id="guest-name" name="guest_name" class="field__input" placeholder="e.g. Sarah Johnson" required>
+                  <input type="text" id="guest-name" name="guest_name" class="field__input" placeholder="e.g. Sarah Johnson" autocomplete="name" required>
                   <span class="field__error" id="guest-name-error">Please enter your full name</span>
                 </div>
                 <div class="field col-50">
                   <label for="guest-email" class="field__label">Email Address <span class="req">*</span></label>
-                  <input type="email" id="guest-email" name="guest_email" class="field__input" placeholder="sarah@organization.org" required>
+                  <input type="email" id="guest-email" name="guest_email" class="field__input" placeholder="sarah@organization.org" autocomplete="email" spellcheck="false" required>
                   <span class="field__error" id="guest-email-error">Please enter a valid email address</span>
                 </div>
               </div>
@@ -932,12 +933,12 @@
               <div class="res-form__row">
                 <div class="field col-50">
                   <label for="guest-phone" class="field__label">Phone / WhatsApp <span class="req">*</span></label>
-                  <input type="tel" id="guest-phone" name="guest_phone" class="field__input" placeholder="+211 ... / +1 ... / +44 ..." required>
+                  <input type="tel" id="guest-phone" name="guest_phone" class="field__input" placeholder="+211 … / +1 … / +44 …" autocomplete="tel" inputmode="tel" required>
                   <span class="field__error" id="guest-phone-error">Please enter a valid contact number</span>
                 </div>
                 <div class="field col-50">
                   <label for="guest-org" class="field__label">Organization / Mission <span class="opt">(Optional)</span></label>
-                  <input type="text" id="guest-org" name="guest_org" class="field__input" placeholder="UN Agency, NGO, or Company">
+                  <input type="text" id="guest-org" name="guest_org" class="field__input" placeholder="UN Agency, NGO, or Company" autocomplete="organization">
                 </div>
               </div>
 
@@ -987,7 +988,7 @@
 
               <div class="field">
                 <label for="special-requests" class="field__label">Special Inquiries &amp; Dietary Requirements</label>
-                <textarea id="special-requests" name="special_requests" class="field__textarea" rows="3" placeholder="Late night check-in, halal/vegetarian meal preferences, twin beds, or conference room booking..."></textarea>
+                <textarea id="special-requests" name="special_requests" class="field__textarea" rows="3" placeholder="Late night check-in, halal/vegetarian meal preferences, twin beds, or conference room booking…"></textarea>
               </div>
 
               <!-- Real-time Cost Estimation Ledger Box -->
@@ -1038,8 +1039,8 @@
                 <span class="contact-entry__icon">📞</span>
                 <div class="contact-entry__info">
                   <strong>24/7 Front Desk Phone</strong>
-                  <p><a href="tel:+211920000123">+211 (0) 920 000 123</a></p>
-                  <p><a href="tel:+211912000456">+211 (0) 912 000 456</a></p>
+                  <p><a href="tel:+211000000000">(+211 ___ ___ ___) &mdash; Front Desk</a></p>
+                  <p><a href="tel:+211000000000">(+211 ___ ___ ___) &mdash; Duty Manager</a></p>
                 </div>
               </div>
 
@@ -1047,7 +1048,7 @@
                 <span class="contact-entry__icon">💬</span>
                 <div class="contact-entry__info">
                   <strong>WhatsApp Concierge Desk</strong>
-                  <p><a href="https://wa.me/211920000123" target="_blank" rel="noopener noreferrer">+211 920 000 123 (Fastest Response)</a></p>
+                  <p><a href="https://wa.me/211000000000" target="_blank" rel="noopener noreferrer">(+211 ___ ___ ___) &mdash; WhatsApp reservations (Fastest Response)</a></p>
                 </div>
               </div>
 
@@ -1143,8 +1144,8 @@
           Plot 42, Block 3, Hai Amarat<br>
           Airport Road Corridor, Juba<br>
           Central Equatoria, South Sudan<br><br>
-          <strong>Tel:</strong> +211 920 000 123<br>
-          <strong>WhatsApp:</strong> +211 920 000 123<br>
+          <strong>Tel:</strong> (+211 ___ ___ ___)<br>
+          <strong>WhatsApp:</strong> (+211 ___ ___ ___) &mdash; WhatsApp reservations<br>
           <strong>Email:</strong> info@nilepalmhotel.com
         </p>
       </div>
@@ -1162,12 +1163,12 @@
   </footer>
 
   <!-- FLOATING WHATSAPP BUTTON (Fixed Bottom-Right) -->
-  <a href="https://wa.me/211920000123?text=Hello%20Nile%20Palm%20Hotel,%20I%20would%20like%20to%20inquire%20about%20a%20room%20booking"
+  <a href="https://wa.me/211000000000?text=Hello%20Nile%20Palm%20Hotel,%20I%20would%20like%20to%20inquire%20about%20a%20room%20booking"
      class="whatsapp-float"
      id="whatsapp-float-btn"
      target="_blank"
      rel="noopener noreferrer"
-     aria-label="Direct WhatsApp Concierge with Nile Palm Hotel (+211 920 000 123)">
+     aria-label="Direct WhatsApp Concierge with Nile Palm Hotel ((+211 ___ ___ ___))">
     <div class="whatsapp-float__circle">
       <svg class="whatsapp-float__icon" viewBox="0 0 24 24" fill="currentColor">
         <path d="M12.04 2C6.58 2 2.13 6.45 2.13 11.91C2.13 13.66 2.59 15.36 3.45 16.86L2.05 22L7.3 20.62C8.75 21.41 10.38 21.83 12.04 21.83C17.5 21.83 21.95 17.38 21.95 11.92C21.95 9.27 20.92 6.78 19.05 4.91C17.18 3.03 14.69 2 12.04 2M12.05 3.67C14.25 3.67 16.31 4.53 17.87 6.09C19.42 7.65 20.28 9.72 20.28 11.92C20.28 16.46 16.58 20.15 12.04 20.15C10.56 20.15 9.11 19.76 7.85 19L7.55 18.83L4.43 19.65L5.26 16.61L5.06 16.29C4.24 14.99 3.8 13.47 3.8 11.91C3.81 7.37 7.5 3.67 12.05 3.67M9.04 7.55C8.86 7.55 8.56 7.62 8.31 7.89C8.06 8.16 7.35 8.82 7.35 10.18C7.35 11.53 8.34 12.83 8.47 13.01C8.61 13.19 10.37 15.91 13.14 16.97C15.44 17.86 15.91 17.68 16.41 17.64C16.91 17.59 18.01 16.98 18.24 16.33C18.47 15.68 18.47 15.13 18.4 15.01C18.33 14.89 18.15 14.82 17.87 14.68C17.6 14.54 16.26 13.88 16.01 13.79C15.76 13.7 15.58 13.65 15.4 13.93C15.22 14.2 14.7 14.82 14.54 15.01C14.38 15.19 14.22 15.21 13.95 15.08C13.67 14.94 12.78 14.65 11.73 13.71C10.91 12.98 10.36 12.08 10.2 11.81C10.04 11.53 10.18 11.38 10.32 11.25C10.45 11.12 10.61 10.91 10.75 10.75C10.89 10.59 10.94 10.47 11.03 10.29C11.12 10.11 11.08 9.95 11.01 9.81C10.94 9.68 10.41 8.38 10.19 7.84C9.97 7.32 9.75 7.4 9.58 7.39C9.42 7.39 9.23 7.55 9.04 7.55Z"/>
@@ -1251,7 +1252,7 @@
           يقوم فريقنا حالياً بإعداد النسخة العربية الكاملة لخدمة ضيوفنا الكرام في جنوب السودان والعالم العربي.
         </p>
         <p class="modal__subtext">
-          Our front desk communicates fluently in Arabic &amp; Juba Arabic via WhatsApp: <strong>+211 920 000 123</strong>.
+          Our front desk communicates fluently in Arabic &amp; Juba Arabic via WhatsApp: <strong>(+211 ___ ___ ___) &mdash; WhatsApp reservations</strong>.
         </p>
         <button type="button" class="btn btn--primary btn--block" id="lang-ok-btn">Understood / حسناً</button>
       </div>
@@ -1264,7 +1265,7 @@
       <div class="print-folio__brand">
         <h1 class="print-folio__title">NILE PALM HOTEL &bull; JUBA</h1>
         <p class="print-folio__tagline">Boutique Hospitality &bull; Hai Amarat Commercial &amp; Diplomatic Corridor</p>
-        <p class="print-folio__meta">Plot 42, Block 3, Airport Road, Juba, South Sudan &bull; Tel: +211 (0) 920 000 123 &bull; reservations@nilepalmhotel.com</p>
+        <p class="print-folio__meta">Plot 42, Block 3, Airport Road, Juba, South Sudan &bull; Tel: (+211 ___ ___ ___) &bull; reservations@nilepalmhotel.com</p>
       </div>
       <div class="print-folio__badge">
         <h2>PRO-FORMA INVOICE</h2>
@@ -1359,7 +1360,7 @@
       <h4>Settlement &amp; Compliance Terms (UN DSA / NGO Institutional Billing):</h4>
       <p>&bull; <strong>Settlement Methods:</strong> US Dollar Cash (clean, unblemished 2013+ series banknotes), Visa, Mastercard, m-GURUSH, MTN Mobile Money, or pre-approved institutional bank wire.</p>
       <p>&bull; <strong>Official Tax Invoicing:</strong> Official itemized VAT receipt and cashier seal provided upon front desk check-in settlement.</p>
-      <p>&bull; <strong>Airport Transfer Logistics:</strong> Please transmit flight number to front desk via WhatsApp (+211 920 000 123) at least 12 hours prior to touchdown.</p>
+      <p>&bull; <strong>Airport Transfer Logistics:</strong> Please transmit flight number to front desk via WhatsApp ((+211 ___ ___ ___)) at least 12 hours prior to touchdown.</p>
     </div>
 
     <div class="print-folio__footer">

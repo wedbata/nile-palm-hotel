@@ -56,7 +56,26 @@
 html {
   font-size: 16px;
   scroll-behavior: smooth;
+  scroll-padding-top: 80px;
+  color-scheme: light;
   -webkit-text-size-adjust: 100%;
+}
+
+.skip-link {
+  position: absolute;
+  top: -100px;
+  left: 16px;
+  background-color: var(--color-gold);
+  color: var(--color-green-dark);
+  padding: 10px 18px;
+  font-weight: 700;
+  font-size: 0.9rem;
+  z-index: 9999;
+  border-radius: var(--radius-sm);
+  transition: top var(--transition-smooth);
+}
+.skip-link:focus {
+  top: 16px;
 }
 
 body {
@@ -76,9 +95,10 @@ img, picture, svg {
   height: auto;
 }
 
-input, button, select, textarea {
+input, button, select, textarea, a {
   font: inherit;
   color: inherit;
+  touch-action: manipulation;
 }
 
 button {
@@ -151,6 +171,7 @@ a:hover {
   color: var(--color-green-dark);
   line-height: 1.22;
   margin-bottom: 12px;
+  text-wrap: balance;
 }
 
 .section-intro__lead {
@@ -171,7 +192,7 @@ a:hover {
   border-radius: var(--radius-sm);
   border: 2px solid transparent;
   cursor: pointer;
-  transition: all var(--transition-smooth);
+  transition: background-color var(--transition-smooth), border-color var(--transition-smooth), color var(--transition-smooth), transform var(--transition-smooth), box-shadow var(--transition-smooth);
   text-decoration: none;
   line-height: 1.2;
   white-space: nowrap;
@@ -501,6 +522,7 @@ a:hover {
   transform: translateX(100%);
   transition: transform 0.28s cubic-bezier(0.16, 1, 0.3, 1);
   overflow-y: auto;
+  overscroll-behavior: contain;
   box-shadow: -8px 0 24px rgba(0, 0, 0, 0.2);
 }
 
@@ -630,6 +652,7 @@ a:hover {
   line-height: 1.18;
   color: var(--color-white);
   margin-bottom: 16px;
+  text-wrap: balance;
 }
 
 .hero__body {
@@ -1473,7 +1496,7 @@ a:hover {
   border-radius: var(--radius-sm);
   flex-shrink: 0;
   margin-top: 2px;
-  transition: all var(--transition-smooth);
+  transition: background-color var(--transition-smooth), border-color var(--transition-smooth);
 }
 .check-container input:checked ~ .check-box {
   background-color: var(--color-ochre);
@@ -1653,7 +1676,7 @@ a:hover {
   align-items: center;
   justify-content: center;
   color: #FFF;
-  transition: all var(--transition-smooth);
+  transition: background-color var(--transition-smooth), color var(--transition-smooth), transform var(--transition-smooth);
 }
 .social-icon:hover {
   background-color: var(--color-ochre);
@@ -1728,8 +1751,8 @@ a:hover {
 /* --- 18. FLOATING WHATSAPP CTA --- */
 .whatsapp-float {
   position: fixed;
-  bottom: 20px;
-  right: 20px;
+  bottom: calc(20px + env(safe-area-inset-bottom, 0px));
+  right: calc(20px + env(safe-area-inset-right, 0px));
   z-index: 1000;
   display: flex;
   align-items: center;
@@ -1828,6 +1851,7 @@ a:hover {
   border-radius: var(--radius-sm);
   box-shadow: 0 16px 40px rgba(0, 0, 0, 0.3);
   overflow: hidden;
+  overscroll-behavior: contain;
   border: 2px solid var(--color-green);
 }
 .modal__window--sm { max-width: 420px; }
